@@ -1,0 +1,346 @@
+@import "normalize";
+@import "layout";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400,500');
+
+
+body{
+	font-family: "Roboto";
+	color:  #999999;
+	font-size: 15px;
+	font-weight: 400;
+	
+	
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	padding: 0;
+	margin: 0;
+}
+
+
+
+/* Layout */
+.ba-container{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1230px;
+}
+
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+.ba-intro{
+	background: #fff url('../img/bg-header.jpg') no-repeat center;
+	color: #fff;
+	background-size: cover;
+	padding: 20px 0 20px;
+}
+.ba-header{
+	display: flex;
+	align-items: center;
+}
+.ba-nav{
+	flex-grow: 1;
+}
+.ba-menu{
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+	 a{
+        display: block;
+        margin-left:54px;
+        padding-bottom: 8px;
+        text-decoration: none;
+        font-family: Montserrat;
+		color:  #ffffff;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 22px;
+		text-transform: uppercase;
+		transition: all 0.6s;
+		position: relative;
+		&.ba-active{
+			color:  #fce38a;
+			&:before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background:  #fce38a;
+            }
+		}
+            
+    
+    	&:before {
+        content: "";
+        width: 0;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background:  #fce38a;
+        transition: all 0.3s;
+    	}
+   		 &:hover {
+       		 &:before {
+            width: 100%;
+            left: 0;
+            background: #fff;
+        	}
+    	}
+	}
+}
+.ba-tools{
+	a{
+		text-decoration: none;
+		margin-left: 54px;
+		color:#fff;
+		&:hover{
+			color:#fce38a;
+		}
+		svg{
+			stroke:currentColor;
+		}
+	}
+	
+}
+.ba-intro-content{
+	padding: 150px 0 130px;
+	text-align: center;
+	.ba-page-suptitle{
+		font-family: "Kaushan Script";
+		color:  #ffffff;
+		font-size: 72px;
+		font-weight: 400;
+		margin-bottom: 20px;
+		}
+	.ba-page-title{
+		font-family: Montserrat;
+		color:  #ffffff;
+		font-size: 150px;
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 1;
+		margin-bottom: 30px;
+		position: relative;
+		&:after{
+			content: "";
+			display: block;
+			background-color:#fff ;
+			height: 3px;
+			width: 60px; 
+			position: absolute;
+			left: 571px;
+    		bottom: -70px;
+		}
+	}
+	.ba-more{
+		display: inline-block;
+		font-family: Montserrat;
+		background-color:  rgba(0, 0, 0, 0);
+		color:  #ffffff;
+ 		font-size: 14px;
+		font-weight: 700;
+		line-height: 34px;
+		border: 3px #fff solid;
+		max-width: 300px;
+		padding: 0 24px ;
+		text-decoration: none;
+		text-transform: uppercase;
+		margin-top: 100px;
+		&:hover{
+			color:#000;
+			border: 3px #000 solid;
+		}
+	}
+}
+.ba-number{
+	display: flex;
+	justify-content:space-between;
+	
+	&__content{
+		font-family: Montserrat;
+		color:  #ffffff;
+		font-size: 24px;
+		font-weight: 700;
+		text-transform: uppercase;
+		position: relative;
+		&:before{
+			content: "";
+			display: block;
+			background-color:  rgba(255, 255, 255, 0.5);
+			width: 280px;
+			height: 3px;
+			position: absolute;
+			left: 0;
+    		bottom: 44px;
+		}
+		span{
+			font-size: 18px;
+			font-weight: 400;
+		}
+	}
+}
+
+
+
+
+
+
+// About
+.ba-about{
+	display: flex;
+	&__title{
+		font-family: Montserrat;
+		color:  #ffffff;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-top: 8px;
+	}
+	&__item{
+		background-color:#95e1d3;
+		}
+	&__link{
+		color: #fff;
+		text-decoration: none;
+		position: relative;
+		display: block;
+		transition: all .3s ease-in;
+		& img{
+			display: block;
+			width: 100%;
+			
+		}
+		&:hover{
+			transform: translate(-10px, -10px);
+		}
+		&:hover .ba-about__desc{
+			opacity:1;
+			transition: all .3s ease-in;
+		}
+	}
+	&__desc{
+		background: url('../img/team-h.png') no-repeat center ;
+		background-size: cover;
+		padding: 10px;
+		text-align: center;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center ;
+		justify-content: center;
+		opacity: 0;
+	}
+}
+.ba-about .ba-about__item:not(:first-child){
+	margin-left: 30px;
+}
+
+.ba-section{
+	padding: 80px 0 107px;
+}
+.ba-section-about{
+	text-align: center;
+	margin-bottom: 90px;
+	&__suptitle{
+		font-family: "Kaushan Script";
+		color:  #333333;
+		font-size: 24px;
+		font-weight: 400;
+		margin-bottom: 15px;
+	}
+	&__title{
+		font-family: Montserrat;
+		color:  #333333;
+		font-size: 30px;
+		font-weight: 700;
+		margin-bottom: 75px;
+		text-transform: uppercase;
+		position: relative;
+		&:after{
+			content: "";
+			display: block;
+			background-color:  #f38181;
+			width: 60px;
+			height: 3px;
+			position: absolute;
+			left: 570px;
+    		bottom: -31px;
+		}
+	}
+	&__text{
+		margin: 0 auto;
+		max-width: 950px;
+		text-align: center;
+		line-height: 24px;
+	}
+}
+
+
+
+
+
+
+
+
+
